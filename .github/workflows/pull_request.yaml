@@ -43,7 +43,7 @@ jobs:
           dry_run: true
 
       - name: Update actions.yml to ${{ steps.tag_version.outputs.new_tag }}
-        uses: mikefarah/yq@v4.30.8
+        uses: mikefarah/yq@v4.35.2
         with:
           cmd: yq e -i '.runs.image = "docker://ghcr.io/${{ github.repository }}:${{ steps.tag_version.outputs.new_tag }}"' action.yml
 
