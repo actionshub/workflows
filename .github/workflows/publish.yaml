@@ -55,7 +55,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Create a GitHub release
-        uses: ncipollo/release-action@v1.14.0
+        uses: ncipollo/release-action@v1.16.0
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
